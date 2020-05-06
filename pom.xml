@@ -26,6 +26,7 @@
           <tomeeVersion>1.7.1</tomeeVersion>
           <tomeeHttpPort>8080</tomeeHttpPort>
           <context>ROOT</context>
+          <args>-Dorg.apache.el.parser.COERCE_TO_ZERO=false</args>
         </configuration>
 
       </plugin>
