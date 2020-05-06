@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" lang="en">
+
+<h:body>
+
+  <h1>jsf-test-emtpy-submitted-values</h1>
+
+  <h2>Welcome to this test page.</h2>
+
+  <p>
+    <b>Note: tbd</b>
+  </p>
+
+  <p>
+    To validate this problem, please ...
+  </p>
+
+  <h:form>
+
+    input integer
+    <h:inputText value="#{bean.integerInput}"/>
+
+    input double
+    <h:inputText value="#{bean.doubleInput}"/>
+
+    input string
+    <h:inputText value="#{bean.stringInput}"/>
+
+    <h:commandButton value="Submit" action="#{bean.submit}"/>
+
+    <h2> We have these values in the bean now: </h2>
+    <h:outputText value="#{bean.toString()}"/>
+
+    <h:messages showDetail="true" showSummary="false"/>
+  </h:form>
+
+</h:body>
+</html>
