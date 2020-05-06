@@ -1,25 +1,23 @@
 package eu.irian;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
 import java.io.Serializable;
 
-//@Named
-//@SessionScoped
-@ManagedBean
+@Named
 @SessionScoped
-public class Bean implements Serializable {
+public class CdiBean implements Serializable {
 
   private Integer integerInput;
   private Double doubleInput;
   private String stringInput;
 
-  public Bean() {
-    System.out.println("constructor called");
+  public CdiBean() {
+    System.out.println("cdi constructor called");
   }
 
   public String submit() {
-    System.out.println("submit called");
+    System.out.println("cdi submit called");
     return "/index.xhtml";
   }
 
@@ -49,7 +47,7 @@ public class Bean implements Serializable {
 
   @Override
   public String toString() {
-    return "Bean{" +
+    return "CdiBean{" +
         "integerInput=" + toString(integerInput) +
         ", doubleInput=" + toString(doubleInput) +
         ", stringInput=" + toString(stringInput) +

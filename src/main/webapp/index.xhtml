@@ -8,6 +8,8 @@
 
 <h:body>
 
+  <h:messages showDetail="true" showSummary="false"/>
+
   <h1>jsf-test-emtpy-submitted-values</h1>
 
   <h2>Welcome to this test page.</h2>
@@ -20,23 +22,44 @@
     To validate this problem, please ...
   </p>
 
+  <h1>CDI</h1>
+
   <h:form>
 
     input integer
-    <h:inputText value="#{bean.integerInput}"/>
+    <h:inputText value="#{cdiBean.integerInput}"/>
 
     input double
-    <h:inputText value="#{bean.doubleInput}"/>
+    <h:inputText value="#{cdiBean.doubleInput}"/>
 
     input string
-    <h:inputText value="#{bean.stringInput}"/>
+    <h:inputText value="#{cdiBean.stringInput}"/>
 
-    <h:commandButton value="Submit" action="#{bean.submit}"/>
+    <h:commandButton value="Submit" action="#{cdiBean.submit}"/>
 
     <h2> We have these values in the bean now: </h2>
-    <h:outputText value="#{bean.toString()}"/>
+    <h:outputText value="#{cdiBean.toString()}"/>
 
-    <h:messages showDetail="true" showSummary="false"/>
+  </h:form>
+
+  <h1>JSF</h1>
+
+  <h:form>
+
+    input integer
+    <h:inputText value="#{jsfBean.integerInput}"/>
+
+    input double
+    <h:inputText value="#{jsfBean.doubleInput}"/>
+
+    input string
+    <h:inputText value="#{jsfBean.stringInput}"/>
+
+    <h:commandButton value="Submit" action="#{jsfBean.submit}"/>
+
+    <h2> We have these values in the bean now: </h2>
+    <h:outputText value="#{jsfBean.toString()}"/>
+
   </h:form>
 
 </h:body>
